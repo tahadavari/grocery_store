@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Admin</class>
+ <widget class="QDialog" name="Admin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Kalameh Bold</family>
+    <pointsize>14</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>OpenHandCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>-1</y>
+     <width>201</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="Menu_layout">
+    <item>
+     <widget class="QFrame" name="Menu_frame">
+      <property name="styleSheet">
+       <string notr="true">QFrame#Menu_frame{
+background:#00204a;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>139</y>
+         <width>201</width>
+         <height>479</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="menu_verticalLayout">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>25</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="editproduct_button">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Kalameh Bold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#editproduct_button{
+background:#00204a;
+border-radius:30px;
+border: 3px solid #005792;
+color:#d9faff;
+}
+QPushButton#editproduct_button:hover{
+background:#00bbf0;
+color:#00204a;
+}</string>
+          </property>
+          <property name="text">
+           <string>Edit Product</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="newproduct_button">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Kalameh Bold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#newproduct_button{
+background:#00204a;
+border-radius:30px;
+border: 3px solid #005792;
+color:#d9faff;
+}
+QPushButton#newproduct_button:hover{
+background:#00bbf0;
+color:#00204a;
+}</string>
+          </property>
+          <property name="text">
+           <string>New Product</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="deleteproduct_button">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Kalameh Bold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#deleteproduct_button{
+background:#00204a;
+border-radius:30px;
+border: 3px solid #005792;
+color:#d9faff;
+}
+QPushButton#deleteproduct_button:hover{
+background:#00bbf0;
+color:#00204a;
+}</string>
+          </property>
+          <property name="text">
+           <string>Delete Product</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="grouping_button">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Kalameh Bold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#grouping_button{
+background:#00204a;
+border-radius:30px;
+border: 3px solid #005792;
+color:#d9faff;
+}
+QPushButton#grouping_button:hover{
+background:#00bbf0;
+color:#00204a;
+}</string>
+          </property>
+          <property name="text">
+           <string>Grouping</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="userinformation_button">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Kalameh Bold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#userinformation_button{
+background:#00204a;
+border-radius:30px;
+border: 3px solid #005792;
+color:#d9faff;
+}
+QPushButton#userinformation_button:hover{
+background:#00bbf0;
+color:#00204a;
+
+}</string>
+          </property>
+          <property name="text">
+           <string>User Information</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="logout_button">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Kalameh Bold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#logout_button{
+background:#00204a;
+border-radius:30px;
+border: 3px solid #005792;
+color:#d9faff;
+}
+QPushButton#logout_button:hover{
+background:#00bbf0;
+color:#00204a;
+
+}</string>
+          </property>
+          <property name="text">
+           <string>Log out</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="editprofile_button">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>95</y>
+         <width>31</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#editprofile_button{
+background:#00204a;
+border-radius:30px;
+border: 0px solid #005792;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>D:/grocery_store/grocery_store/assets/icons/pencil.png</normaloff>D:/grocery_store/grocery_store/assets/icons/pencil.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>15</width>
+         <height>15</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="username_label">
+       <property name="geometry">
+        <rect>
+         <x>71</x>
+         <y>90</y>
+         <width>66</width>
+         <height>37</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Kalameh ExtraBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel#username_label{
+color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>Admin</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="profilephoto_label">
+       <property name="geometry">
+        <rect>
+         <x>69</x>
+         <y>19</y>
+         <width>64</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="assets.qrc">:/icons/D:/grocery_store/grocery_store/assets/icons/management.png</pixmap>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>9</y>
+     <width>571</width>
+     <height>581</height>
+    </rect>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::North</enum>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <property name="elideMode">
+    <enum>Qt::ElideNone</enum>
+   </property>
+   <property name="tabsClosable">
+    <bool>true</bool>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="tabBarAutoHide">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="icon">
+     <iconset>
+      <normaloff>D:/grocery_store/grocery_store/assets/icons/TabIcon/information.png</normaloff>D:/grocery_store/grocery_store/assets/icons/TabIcon/information.png</iconset>
+    </attribute>
+    <attribute name="title">
+     <string>Information</string>
+    </attribute>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
+ <connections/>
+</ui>

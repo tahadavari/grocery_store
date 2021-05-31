@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>D:/grocery_store/grocery_store/assets/icons/lock (1).png</file>
+        <file>D:/grocery_store/grocery_store/assets/icons/user (3).png</file>
+        <file>D:/grocery_store/grocery_store/assets/icons/map.png</file>
+        <file>D:/grocery_store/grocery_store/assets/icons/phone-call.png</file>
+        <file>D:/grocery_store/grocery_store/assets/icons/management.png</file>
+        <file>D:/grocery_store/grocery_store/assets/icons/profile.png</file>
+        <file>D:/grocery_store/grocery_store/assets/icons/settings.png</file>
+        <file>D:/grocery_store/grocery_store/assets/icons/pencil.png</file>
+        <file>D:/grocery_store/grocery_store/assets/icons/Untitled-1.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix1"/>
+</RCC>
