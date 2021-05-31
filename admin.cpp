@@ -1,5 +1,7 @@
 #include "admin.h"
 #include "ui_admin.h"
+#include "mainwindow.h"
+#include "grouping.h"
 
 Admin::Admin(QWidget *parent) :
     QDialog(parent),
@@ -48,7 +50,7 @@ void Admin::on_deleteproduct_button_clicked()
 
 void Admin::on_grouping_button_clicked()
 {
-    ui->tabWidget->addTab(new QWidget,"Grouping");
+    ui->tabWidget->addTab(new Grouping,"Grouping");
     ui->tabWidget->setCurrentIndex(ui->tabWidget->count()-1);
     ui->tabWidget->setTabIcon(ui->tabWidget->currentIndex(),QIcon("D:/grocery_store/grocery_store/assets/icons/competition.png"));
 }
@@ -65,6 +67,9 @@ void Admin::on_userinformation_button_clicked()
 
 void Admin::on_logout_button_clicked()
 {
+      MainWindow *login = new MainWindow();
+      login->show();
+      close();
 
 }
 

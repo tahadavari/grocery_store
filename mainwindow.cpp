@@ -52,6 +52,9 @@ void MainWindow::on_login_button_clicked()
                     admin = new Admin();
                     admin->show();
                     close();
+                    break;
+
+
                 }
 
 

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Grouping</class>
+ <widget class="QWidget" name="Grouping">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>521</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Grouping{
+background:#d9faff}</string>
+  </property>
+  <widget class="QLabel" name="addnewgroup">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>95</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Black</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>Add new group</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="exisitinggroups">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>90</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Black</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>Existing groups</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>146</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh ExtraBold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="groupname">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>180</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#groupname{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>250</y>
+     <width>80</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#add{
+background:#005792;
+border-radius:25px;
+color:#d9faff;
+
+}
+#add:hover{
+background:#00204a;
+border-radius:25px;
+color:#d9faff;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>149</y>
+     <width>181</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame{
+background:#00bbf0;
+border-radius:25px;
+color:#d9faff}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTextBrowser" name="existlist">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>161</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Bold</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#existlist{
+background:#00bbf0;
+border-radius:25px;
+color:#d9faff}</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>319</x>
+     <y>179</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_2{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame_2</zorder>
+  <zorder>frame</zorder>
+  <zorder>addnewgroup</zorder>
+  <zorder>exisitinggroups</zorder>
+  <zorder>name</zorder>
+  <zorder>groupname</zorder>
+  <zorder>add</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

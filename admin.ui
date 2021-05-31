@@ -395,8 +395,53 @@ color:white;
     <attribute name="title">
      <string>Information</string>
     </attribute>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-1</y>
+       <width>571</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#frame{
+background:#d9faff
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
    </widget>
   </widget>
+  <widget class="QFrame" name="bg_frame">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>0</y>
+     <width>601</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#bg_frame{
+background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(39, 81, 229, 255), stop:1 rgba(216, 177, 255, 255));
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>bg_frame</zorder>
+  <zorder>horizontalLayoutWidget</zorder>
+  <zorder>tabWidget</zorder>
  </widget>
  <resources>
   <include location="assets.qrc"/>

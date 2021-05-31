@@ -10,17 +10,20 @@ CONFIG += c++11
 
 SOURCES += \
     admin.cpp \
+    grouping.cpp \
     main.cpp \
     mainwindow.cpp \
     singup.cpp
 
 HEADERS += \
     admin.h \
+    grouping.h \
     mainwindow.h \
     singup.h
 
 FORMS += \
     admin.ui \
+    grouping.ui \
     mainwindow.ui \
     singup.ui
 
