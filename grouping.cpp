@@ -30,7 +30,7 @@ void Grouping::on_add_clicked()
     if(!groups_file.open(QFile::Append| QFile::Text))
         QMessageBox::warning(this,"File Error","File not open");
     QTextStream in(&groups_file);
-    in << ui->groupname->text()+"\n";
+    in << ui->groupname->text()<<"\n";
     QMessageBox::information(this,"Done","Group add");
     ui->groupname->clear();
     groups_file.close();

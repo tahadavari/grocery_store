@@ -2,6 +2,7 @@
 #include "ui_admin.h"
 #include "mainwindow.h"
 #include "grouping.h"
+#include "newproduct.h"
 
 Admin::Admin(QWidget *parent) :
     QDialog(parent),
@@ -32,7 +33,7 @@ void Admin::on_tabWidget_tabCloseRequested(int index)
 
 void Admin::on_newproduct_button_clicked()
 {
-    ui->tabWidget->addTab(new QWidget,"New Product");
+    ui->tabWidget->addTab(new NewProduct,"New Product");
     ui->tabWidget->setCurrentIndex(ui->tabWidget->count()-1);
     ui->tabWidget->setTabIcon(ui->tabWidget->currentIndex(),QIcon("D:/grocery_store/grocery_store/assets/icons/plus.png"));
 }

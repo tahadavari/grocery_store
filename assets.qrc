@@ -11,4 +11,5 @@
         <file>D:/grocery_store/grocery_store/assets/icons/Untitled-1.png</file>
     </qresource>
     <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/icon2"/>
 </RCC>

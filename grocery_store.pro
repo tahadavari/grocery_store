@@ -13,18 +13,21 @@ SOURCES += \
     grouping.cpp \
     main.cpp \
     mainwindow.cpp \
+    newproduct.cpp \
     singup.cpp
 
 HEADERS += \
     admin.h \
     grouping.h \
     mainwindow.h \
+    newproduct.h \
     singup.h
 
 FORMS += \
     admin.ui \
     grouping.ui \
     mainwindow.ui \
+    newproduct.ui \
     singup.ui
 
 # Default rules for deployment.
