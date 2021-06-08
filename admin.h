@@ -31,6 +31,8 @@ private slots:
 
     void on_logout_button_clicked();
 
+    void on_tabWidget_tabBarClicked(int index);
+
 private:
     Ui::Admin *ui;
 };

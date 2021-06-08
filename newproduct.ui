@@ -417,6 +417,43 @@ color:#00204a;
     <enum>QFrame::Raised</enum>
    </property>
   </widget>
+  <widget class="QPushButton" name="reload">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>220</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#reload{
+background:#00bbf0;
+border-radius:10px;
+color:#d9faff;
+
+}
+#reload:hover{
+background:#005792;
+border-radius:10px;
+color:#d9faff;
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/icons/D:/grocery_store/grocery_store/assets/icons/reload.png</normaloff>:/icons/D:/grocery_store/grocery_store/assets/icons/reload.png</iconset>
+   </property>
+  </widget>
   <zorder>frame_6</zorder>
   <zorder>add</zorder>
   <zorder>addnewproduct_lable</zorder>
@@ -434,7 +471,10 @@ color:#00204a;
   <zorder>productbrand</zorder>
   <zorder>productnumber</zorder>
   <zorder>productgroup</zorder>
+  <zorder>reload</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
  <connections/>
 </ui>

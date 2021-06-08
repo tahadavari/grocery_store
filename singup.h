@@ -2,6 +2,8 @@
 #define SINGUP_H
 
 #include <QDialog>
+#include "user.h"
+#include "mainwindow.h"
 namespace Ui {
 class SingUp;
 }
@@ -16,6 +18,10 @@ public:
 
 private slots:
     void on_Crate_button_clicked();
+
+//    void on_pushButton_clicked();
+
+    void on_loginnow_clicked();
 
 private:
     Ui::SingUp *ui;

@@ -9,6 +9,7 @@
         <file>D:/grocery_store/grocery_store/assets/icons/settings.png</file>
         <file>D:/grocery_store/grocery_store/assets/icons/pencil.png</file>
         <file>D:/grocery_store/grocery_store/assets/icons/Untitled-1.png</file>
+        <file>D:/grocery_store/grocery_store/assets/icons/reload.png</file>
     </qresource>
     <qresource prefix="/new/prefix1"/>
     <qresource prefix="/icon2"/>

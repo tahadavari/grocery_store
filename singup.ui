@@ -48,9 +48,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>400</y>
+      <y>380</y>
       <width>641</width>
-      <height>101</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -74,7 +74,7 @@ border-bottom-right-radius: 25px;
     <widget class="QPushButton" name="Crate_button">
      <property name="geometry">
       <rect>
-       <x>185</x>
+       <x>180</x>
        <y>20</y>
        <width>271</width>
        <height>61</height>
@@ -103,6 +103,67 @@ color:#d9faff;
      </property>
      <property name="text">
       <string>Crete</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="loginnow">
+     <property name="geometry">
+      <rect>
+       <x>259</x>
+       <y>81</y>
+       <width>271</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Kalameh</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#loginnow{
+background: rgb(0,0,0,0);
+border-radius:25px;
+color:#00bbf0;
+}
+QPushButton#loginnow:hover{
+background: rgb(0,0,0,0);
+border-radius:25px;
+color:#00bbf0;
+text-decoration: underline;
+}</string>
+     </property>
+     <property name="text">
+      <string>Login now</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="loginq">
+     <property name="geometry">
+      <rect>
+       <x>188</x>
+       <y>80</y>
+       <width>191</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Kalameh</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#loginq{
+color:#00bbf0;
+background:rgb(0,0,0,0);
+
+}
+</string>
+     </property>
+     <property name="text">
+      <string>You have an accont ? </string>
      </property>
     </widget>
    </widget>

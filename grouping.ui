@@ -163,26 +163,26 @@ color:#d9faff}</string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QTextBrowser" name="existlist">
+   <widget class="QTableView" name="tableexisting">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>20</y>
       <width>161</width>
-      <height>171</height>
+      <height>151</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Kalameh Bold</family>
+      <family>Kalameh Black</family>
       <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">#existlist{
+     <string notr="true">#tableexisting{
 background:#00bbf0;
-border-radius:25px;
-color:#d9faff}</string>
+border:noun;
+color:#00204a}</string>
     </property>
    </widget>
   </widget>

@@ -21,9 +21,8 @@ private slots:
 
     void on_login_button_clicked();
 
+
 private:
     Ui::MainWindow *ui;
-    SingUp *singup;
-    Admin *admin;
 };
 #endif // MAINWINDOW_H

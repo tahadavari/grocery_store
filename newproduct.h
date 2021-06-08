@@ -15,6 +15,12 @@ public:
     explicit NewProduct(QWidget *parent = nullptr);
     ~NewProduct();
 
+private slots:
+    void on_add_clicked();
+
+
+    void on_reload_clicked();
+
 private:
     Ui::NewProduct *ui;
 };

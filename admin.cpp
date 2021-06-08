@@ -3,12 +3,29 @@
 #include "mainwindow.h"
 #include "grouping.h"
 #include "newproduct.h"
+#include <QFile>
+#include <QTextStream>
+#include <QMessageBox>
+#include <QSqlQueryModel>
+#include <QSqlDatabase>
+#include <QSqlDriver>
+#include <QSqlError>
+#include <QSqlQuery>
+
+
+
+
 
 Admin::Admin(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Admin)
 {
     ui->setupUi(this);
+    this->setWindowTitle ("ADMIN PANNEL");
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("C:/Users/ANDISHE/Documents/grocery_store/grocery_db.db");
+    if(!db.isOpen())
+        db.open();
 }
 
 Admin::~Admin()
@@ -73,4 +90,6 @@ void Admin::on_logout_button_clicked()
       close();
 
 }
+
+
 

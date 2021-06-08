@@ -1,14 +1,28 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "singup.h"
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
 #include <QStringList>
+#include <QSqlQueryModel>
+#include <QSqlDatabase>
+#include <QSqlDriver>
+#include <QSqlError>
+#include <QSqlQuery>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle ("LOGIN");
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("C:/Users/ANDISHE/Documents/grocery_store/grocery_db.db");
+    if(!db.isOpen())
+        db.open();
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -19,7 +33,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_singupnow_clicked()
 {
-    singup = new SingUp();
+    SingUp *singup = new SingUp();
     singup->show();
     close();
 }
@@ -33,40 +47,39 @@ void MainWindow::on_login_button_clicked()
         QMessageBox::warning(this,"Field Empty","All fields are required");
     }
     else {
-        QFile user_file("users.txt");
-        if(!user_file.open(QFile::ReadOnly| QFile::Text))
-            QMessageBox::warning(this,"File Error","File not open");
         QString username = ui->username->text();
         QString password = ui->password->text();
-        QTextStream in(&user_file);
-        bool if_login=false;
-        while(true)
+
+        QSqlQuery q;
+        q.prepare("SELECT count(username) FROM users WHERE username== :username and password== :password");
+        q.bindValue(":username",username);
+        q.bindValue(":password", password);
+        q.exec();
+        if(q.first())
         {
-            QStringList user_pass = in.readLine().split(":");
-            if(user_pass[0]==username && user_pass[1]==password)
+            if(q.value(0).toString()=="0")
+                QMessageBox::warning(this,"ERROR","Username or Password wrong");
+            else
             {
-                QMessageBox::information(this,"Sing in Done","Welcome"+username);
+                QMessageBox::information(this,"WELCOME","Welcome "+username);
                 if (username=="Admin")
                 {
-                    user_file.close();
-                    admin = new Admin();
-                    admin->show();
-                    close();
-                    break;
-
-
+                   Admin *admin= new Admin;
+                   admin->show();
+                   close();
                 }
-
-
+                else
+                {
+                    User *user = new User;
+                    user->show();
+                    close();
+                }
             }
-        }
-        if (!if_login)
-        {
-            QMessageBox::warning(this,"Invalid","Invalid username or password");
-            ui->username->clear();
-            ui->password->clear();
+
         }
 
     }
 }
+
+
 

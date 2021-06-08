@@ -4,19 +4,27 @@
 #include <QTextStream>
 #include <QStringList>
 #include <QMessageBox>
+#include <QSqlQueryModel>
+#include <QSqlDatabase>
+#include <QSqlDriver>
+#include <QSqlError>
+#include <QSqlQuery>
 
 Grouping::Grouping(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Grouping)
 {
     ui->setupUi(this);
-    QFile groups_file("groups.txt");
-    if(!groups_file.open(QFile::ReadOnly| QFile::Text))
-        QMessageBox::warning(this,"File Error","File not open");
-    QTextStream out(&groups_file);
-    QString text = out.readAll();
-    ui->existlist->setText(text);
-    groups_file.close();
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("C:/Users/ANDISHE/Documents/grocery_store/grocery_db.db");
+    if(!db.isOpen())
+        db.open();
+    QSqlQuery q;
+    q.exec("SELECT name FROM groups");
+    QSqlQueryModel *model=new QSqlQueryModel;
+    model->setQuery(q);
+    ui->tableexisting->setModel(model);
+
 }
 
 Grouping::~Grouping()
@@ -26,20 +34,16 @@ Grouping::~Grouping()
 
 void Grouping::on_add_clicked()
 {
-    QFile groups_file("groups.txt");
-    if(!groups_file.open(QFile::Append| QFile::Text))
-        QMessageBox::warning(this,"File Error","File not open");
-    QTextStream in(&groups_file);
-    in << ui->groupname->text()<<"\n";
+    QString name=ui->groupname->text();
+    QSqlQuery q;
+    QString db_query = "INSERT INTO groups(name) VALUES('"+name+"')";
+    q.exec(db_query);
     QMessageBox::information(this,"Done","Group add");
     ui->groupname->clear();
-    groups_file.close();
+    q.exec("SELECT name FROM groups");
+    QSqlQueryModel *model=new QSqlQueryModel;
+    model->setQuery(q);
+    ui->tableexisting->setModel(model);
 
-    if(!groups_file.open(QFile::ReadOnly| QFile::Text))
-        QMessageBox::warning(this,"File Error","File not open");
-    QTextStream out(&groups_file);
-    QString text = out.readAll();
-    ui->existlist->setText(text);
-    groups_file.close();
 }
 
