@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserInformation</class>
+ <widget class="QWidget" name="UserInformation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>521</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="name_4">
+   <property name="geometry">
+    <rect>
+     <x>359</x>
+     <y>30</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh ExtraBold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>search by</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="search">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>71</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#search
+{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_6">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>70</y>
+     <width>311</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_6{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="searchButton">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>10</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#searchButton{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/magnifying-glass.png</normaloff>../../Downloads/magnifying-glass.png</iconset>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="search_lable">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>30</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh ExtraBold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>search</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="search_by">
+   <property name="geometry">
+    <rect>
+     <x>369</x>
+     <y>70</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#search_by{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_7">
+   <property name="geometry">
+    <rect>
+     <x>359</x>
+     <y>70</y>
+     <width>191</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_7
+{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>160</y>
+     <width>181</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame{
+background:#00bbf0;
+border-radius:25px;
+color:#d9faff}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTableView" name="user">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>161</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Bold</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#user{
+background:#00bbf0;
+border:noun;
+color:#00204a}</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="deleteproduct_lable_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Medium</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>result (choose to show)</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_9">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>160</y>
+     <width>311</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_9{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="username">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>9</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh ExtraBold</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:#005792}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_10">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>270</y>
+     <width>311</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_10{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="phone">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh ExtraBold</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:#005792}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_11">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>390</y>
+     <width>311</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_11{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="address">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh ExtraBold</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:#005792}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="deleteproduct_lable_4">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>130</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Medium</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>username</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="deleteproduct_lable_5">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>240</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Medium</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>phone number</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="deleteproduct_lable_6">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>360</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Medium</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>address</string>
+   </property>
+  </widget>
+  <zorder>name_4</zorder>
+  <zorder>frame_6</zorder>
+  <zorder>search_lable</zorder>
+  <zorder>frame_7</zorder>
+  <zorder>search_by</zorder>
+  <zorder>search</zorder>
+  <zorder>frame</zorder>
+  <zorder>deleteproduct_lable_2</zorder>
+  <zorder>frame_9</zorder>
+  <zorder>frame_10</zorder>
+  <zorder>frame_11</zorder>
+  <zorder>deleteproduct_lable_4</zorder>
+  <zorder>deleteproduct_lable_5</zorder>
+  <zorder>deleteproduct_lable_6</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

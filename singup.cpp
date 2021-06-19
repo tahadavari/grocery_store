@@ -53,7 +53,7 @@ void SingUp::on_Crate_button_clicked()
             QMessageBox::StandardButton reply = QMessageBox::question(this,"Done","Your account was created successfully Do you want to log in to your account?");
             if(reply == QMessageBox::Yes)
             {
-                User *user=new User;
+                User *user=new User(nullptr,username);
                 user->show();
                 close();
             }

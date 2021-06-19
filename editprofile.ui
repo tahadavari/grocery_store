@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditProfile</class>
+ <widget class="QWidget" name="EditProfile">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>521</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>-120</x>
+     <y>-10</y>
+     <width>900</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame{
+    background:#d9faff;
+	border-radius:25px;
+    border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+    box-shadow: -20px -32px 72px  rgb(0, 0, 0, 50),
+                2px 2px 5px rgb(94, 104, 121, 50)
+}
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="user_logo_s">
+    <property name="geometry">
+     <rect>
+      <x>155</x>
+      <y>100</y>
+      <width>111</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>72</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#user_logo_s{
+background:rgb(0,0,0,0);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="assets.qrc">:/icons/D:/grocery_store/grocery_store/assets/icons/user (3).png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="username_s">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>130</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Bold</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit#username_s{
+background: #00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="username_F_s">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>130</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#username_F_s{
+background: #00bbf0;
+border-radius:25px;
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="username_befor_s">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>90</y>
+      <width>271</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Black</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#username_befor_s{
+background: rgb(0,0,0,0);
+border-radius:25px;
+color:#005792;
+}</string>
+    </property>
+    <property name="text">
+     <string>      username</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="password_F_s">
+    <property name="geometry">
+     <rect>
+      <x>145</x>
+      <y>260</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#password_F_s{
+background: #00bbf0;
+border-radius:25px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="password_logo_s">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>230</y>
+      <width>111</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>72</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#password_logo_s{
+background:rgb(0,0,0,0);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="assets.qrc">:/icons/D:/grocery_store/grocery_store/assets/icons/lock (1).png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="password_befor_s">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>219</y>
+      <width>271</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Black</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#password_befor_s{
+background: rgb(0,0,0,0);
+border-radius:25px;
+color:#005792;
+}</string>
+    </property>
+    <property name="text">
+     <string>password</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="password_s">
+    <property name="geometry">
+     <rect>
+      <x>195</x>
+      <y>260</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Bold</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit#password_s{
+background: #00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="address_F_s">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>130</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#address_F_s{
+background: #00bbf0;
+border-radius:25px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="address_logo_s">
+    <property name="geometry">
+     <rect>
+      <x>415</x>
+      <y>100</y>
+      <width>111</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>72</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#address_logo_s{
+background:rgb(0,0,0,0);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="assets.qrc">:/icons/D:/grocery_store/grocery_store/assets/icons/map.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="address_befor_s">
+    <property name="geometry">
+     <rect>
+      <x>419</x>
+      <y>89</y>
+      <width>271</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Black</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#address_befor_s{
+background: rgb(0,0,0,0);
+border-radius:25px;
+color:#005792;
+}</string>
+    </property>
+    <property name="text">
+     <string>address</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="address_s">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>130</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Bold</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit#address_s{
+background: #00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="phonenumber_F_s">
+    <property name="geometry">
+     <rect>
+      <x>406</x>
+      <y>260</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#phonenumber_F_s{
+background: #00bbf0;
+border-radius:25px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="phonenumber_logo_s">
+    <property name="geometry">
+     <rect>
+      <x>426</x>
+      <y>230</y>
+      <width>111</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>72</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#phonenumber_logo_s{
+background:rgb(0,0,0,0);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="assets.qrc">:/icons/D:/grocery_store/grocery_store/assets/icons/phone-call.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="phonenumber_befor_s">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>219</y>
+      <width>271</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Black</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#phonenumber_befor_s{
+background: rgb(0,0,0,0);
+border-radius:25px;
+color:#005792;
+}</string>
+    </property>
+    <property name="text">
+     <string>phone number</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="phonenumber_s">
+    <property name="geometry">
+     <rect>
+      <x>461</x>
+      <y>260</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh Bold</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit#phonenumber_s{
+background: #00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="update_button">
+    <property name="geometry">
+     <rect>
+      <x>145</x>
+      <y>340</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#update_button{
+background: #005792;
+border-radius:25px;
+color:#d9faff;
+}
+QPushButton#update_button:hover{
+background: #00bbf0;
+border-radius:25px;
+color:#d9faff;
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Update</string>
+    </property>
+   </widget>
+   <zorder>username_befor_s</zorder>
+   <zorder>password_F_s</zorder>
+   <zorder>password_logo_s</zorder>
+   <zorder>password_befor_s</zorder>
+   <zorder>password_s</zorder>
+   <zorder>username_F_s</zorder>
+   <zorder>user_logo_s</zorder>
+   <zorder>username_s</zorder>
+   <zorder>address_F_s</zorder>
+   <zorder>address_logo_s</zorder>
+   <zorder>address_befor_s</zorder>
+   <zorder>address_s</zorder>
+   <zorder>phonenumber_F_s</zorder>
+   <zorder>phonenumber_logo_s</zorder>
+   <zorder>phonenumber_befor_s</zorder>
+   <zorder>phonenumber_s</zorder>
+   <zorder>update_button</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
+ <connections/>
+</ui>

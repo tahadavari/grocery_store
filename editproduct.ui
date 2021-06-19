@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditProduct</class>
+ <widget class="QWidget" name="EditProduct">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>521</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QComboBox" name="products">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>251</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#products{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_6">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>100</y>
+     <width>261</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_6{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="deleteproduct_lable">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Black</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>Edit Product</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="deleteproduct_lable_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>70</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Medium</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>chose to edit</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_4">
+   <property name="geometry">
+    <rect>
+     <x>39</x>
+     <y>430</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_4{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name_4">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>177</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh ExtraBold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>Brand</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>39</x>
+     <y>209</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_2{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="productname">
+    <property name="geometry">
+     <rect>
+      <x>23</x>
+      <y>15</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kalameh ExtraBold</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#productname{
+color:#005792}</string>
+    </property>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLineEdit" name="productbrand">
+   <property name="geometry">
+    <rect>
+     <x>331</x>
+     <y>211</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#productbrand
+{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="namelable">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>176</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh ExtraBold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="productgroup">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>310</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#productgroup{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pricelable">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>277</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh ExtraBold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>Price</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name_5">
+   <property name="geometry">
+    <rect>
+     <x>311</x>
+     <y>277</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh ExtraBold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>Group</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="reload">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>310</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#reload{
+background:#00bbf0;
+border-radius:10px;
+color:#d9faff;
+
+}
+#reload:hover{
+background:#005792;
+border-radius:10px;
+color:#d9faff;
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/icons/D:/grocery_store/grocery_store/assets/icons/reload.png</normaloff>:/icons/D:/grocery_store/grocery_store/assets/icons/reload.png</iconset>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="productprice">
+   <property name="geometry">
+    <rect>
+     <x>61</x>
+     <y>311</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#productprice
+{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_3">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>310</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_3{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name_3">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>397</y>
+     <width>221</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh ExtraBold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:#005792}</string>
+   </property>
+   <property name="text">
+    <string>Number of product</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_7">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>310</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_7{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="update">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>431</y>
+     <width>191</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#update{
+background:#005792;
+border-radius:25px;
+color:#d9faff;
+
+}
+#update:hover{
+background:#00204a;
+border-radius:25px;
+color:#d9faff;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Update</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="productnumber">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>431</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kalameh Bold</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#productnumber{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_5">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>210</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame_5{
+background:#00bbf0;
+border-radius:25px;
+color:#00204a;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame_7</zorder>
+  <zorder>frame_6</zorder>
+  <zorder>deleteproduct_lable</zorder>
+  <zorder>deleteproduct_lable_2</zorder>
+  <zorder>products</zorder>
+  <zorder>frame_4</zorder>
+  <zorder>name_4</zorder>
+  <zorder>frame_2</zorder>
+  <zorder>namelable</zorder>
+  <zorder>pricelable</zorder>
+  <zorder>name_5</zorder>
+  <zorder>reload</zorder>
+  <zorder>frame_3</zorder>
+  <zorder>name_3</zorder>
+  <zorder>update</zorder>
+  <zorder>frame_5</zorder>
+  <zorder>productgroup</zorder>
+  <zorder>productbrand</zorder>
+  <zorder>productnumber</zorder>
+  <zorder>productprice</zorder>
+ </widget>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
+ <connections/>
+</ui>

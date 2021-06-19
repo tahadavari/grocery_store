@@ -1,25 +1,29 @@
-#include "newproduct.h"
-#include "ui_newproduct.h"
-#include <QFile>
+#include "editproduct.h"
+#include "ui_editproduct.h"
 #include <QMessageBox>
-#include <QTextStream>
 #include <QSqlQueryModel>
 #include <QSqlDatabase>
 #include <QSqlDriver>
 #include <QSqlError>
 #include <QSqlQuery>
-NewProduct::NewProduct(QWidget *parent) :
+
+EditProduct::EditProduct(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::NewProduct)
+    ui(new Ui::EditProduct)
 {
     ui->setupUi(this);
-
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("C:/Users/ANDISHE/Documents/grocery_store/grocery_db.db");
     if(!db.isOpen())
         db.open();
-
     QSqlQuery q;
+    q.exec("SELECT name FROM products");
+    ui->products->addItem("");
+    while(q.next())
+    {
+        QString value=q.value(0).toString();
+        ui->products->addItem(value);
+    }
     q.exec("SELECT name FROM groups");
     ui->productgroup->addItem("");
     while(q.next())
@@ -27,15 +31,42 @@ NewProduct::NewProduct(QWidget *parent) :
         QString value=q.value(0).toString();
         ui->productgroup->addItem(value);
     }
-
 }
 
-NewProduct::~NewProduct()
+EditProduct::~EditProduct()
 {
     delete ui;
 }
 
-void NewProduct::on_add_clicked()
+
+void EditProduct::on_products_activated(int index)
+{
+    QString edit_product=ui->products->currentText();
+    QSqlQuery q;
+    q.exec("SELECT * FROM products WHERE name=='"+edit_product+"'");
+    if(ui->products->currentText()=="")
+    {
+        ui->productname->clear();
+        ui->productbrand->clear();
+        ui->productprice->clear();
+        ui->productnumber->clear();
+        ui->productgroup->setCurrentIndex(0);
+
+    }
+
+    if(q.first())
+    {
+        ui->productname->setText(q.value(1).toString());
+        ui->productbrand->setText(q.value(2).toString());
+        ui->productprice->setText(q.value(3).toString());
+        ui->productnumber->setText(q.value(4).toString());
+        ui->productgroup->setCurrentIndex(q.value(5).toInt());
+
+    }
+}
+
+
+void EditProduct::on_update_clicked()
 {
     if(ui->productname->text()=="" ||
             ui->productprice->text()=="" ||
@@ -55,40 +86,17 @@ void NewProduct::on_add_clicked()
         if(q_groupid.first())
             productG = q_groupid.value(0).toString();
         QSqlQuery q;
-        QString query_product = "INSERT INTO products(name,brand,price,count,group_id) VALUES('"+productname+"','"+productbarnd+"',"+productprice+","+productnumber+","+productG+")";
+        QString query_product = "UPDATE products SET brand='"+productbarnd+"',price="+productprice+",count="+productnumber+",group_id="+productG+" WHERE name=='"+productname+"'";
         if(q.exec(query_product))
-            QMessageBox::information(this,"DONE","Product added successfully");
-        else
-            QMessageBox::warning(this,"ERROR","This product exists");
+            QMessageBox::information(this,"UPDATE","Product update successfully");
 
+        ui->products->setCurrentIndex(0);
         ui->productname->clear();
         ui->productbrand->clear();
         ui->productprice->clear();
         ui->productnumber->clear();
         ui->productgroup->setCurrentIndex(0);
 
-    }
-}
-
-
-
-
-
-void NewProduct::on_reload_clicked()
-{
-    ui->productgroup->clear();
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/ANDISHE/Documents/grocery_store/grocery_db.db");
-    if(!db.isOpen())
-        db.open();
-
-    QSqlQuery q;
-    q.exec("SELECT name FROM groups");
-    ui->productgroup->addItem("");
-    while(q.next())
-    {
-        QString value=q.value(0).toString();
-        ui->productgroup->addItem(value);
     }
 }
 

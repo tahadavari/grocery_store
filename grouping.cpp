@@ -37,8 +37,10 @@ void Grouping::on_add_clicked()
     QString name=ui->groupname->text();
     QSqlQuery q;
     QString db_query = "INSERT INTO groups(name) VALUES('"+name+"')";
-    q.exec(db_query);
-    QMessageBox::information(this,"Done","Group add");
+    if(q.exec(db_query))
+        QMessageBox::information(this,"Done","Group add");
+    else
+        QMessageBox::warning(this,"ERROR","This group exists");
     ui->groupname->clear();
     q.exec("SELECT name FROM groups");
     QSqlQueryModel *model=new QSqlQueryModel;

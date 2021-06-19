@@ -70,7 +70,7 @@ void MainWindow::on_login_button_clicked()
                 }
                 else
                 {
-                    User *user = new User;
+                    User *user = new User(nullptr,username);
                     user->show();
                     close();
                 }

@@ -3,6 +3,10 @@
 #include "mainwindow.h"
 #include "grouping.h"
 #include "newproduct.h"
+#include "deleteproduct.h"
+#include "editproduct.h"
+#include "userinformation.h"
+#include "editprofile.h"
 #include <QFile>
 #include <QTextStream>
 #include <QMessageBox>
@@ -26,6 +30,23 @@ Admin::Admin(QWidget *parent) :
     db.setDatabaseName("C:/Users/ANDISHE/Documents/grocery_store/grocery_db.db");
     if(!db.isOpen())
         db.open();
+    QSqlQuery q;
+    q.exec("SELECT count(username) FROM users ");
+    if(q.first())
+    {
+        int user_count=q.value(0).toInt()-1;
+        QString count = QString::number(user_count);
+        ui->users->setText(count);
+    }
+    q.exec("SELECT count(name) FROM products ");
+    if(q.first())
+    {
+        int user_count=q.value(0).toInt()-1;
+        QString count = QString::number(user_count);
+        ui->products->setText(count);
+    }
+
+
 }
 
 Admin::~Admin()
@@ -35,7 +56,7 @@ Admin::~Admin()
 
 void Admin::on_editproduct_button_clicked()
 {
-    ui->tabWidget->addTab(new QWidget,"Edit Product");
+    ui->tabWidget->addTab(new EditProduct,"Edit Product");
     ui->tabWidget->setCurrentIndex(ui->tabWidget->count()-1);
     ui->tabWidget->setTabIcon(ui->tabWidget->currentIndex(),QIcon("D:/grocery_store/grocery_store/assets/icons/edit.png"));
 }
@@ -59,7 +80,7 @@ void Admin::on_newproduct_button_clicked()
 
 void Admin::on_deleteproduct_button_clicked()
 {
-    ui->tabWidget->addTab(new QWidget,"Delete Product");
+    ui->tabWidget->addTab(new DeleteProduct,"Delete Product");
     ui->tabWidget->setCurrentIndex(ui->tabWidget->count()-1);
     ui->tabWidget->setTabIcon(ui->tabWidget->currentIndex(),QIcon("D:/grocery_store/grocery_store/assets/icons/trash.png"));
 }
@@ -76,7 +97,7 @@ void Admin::on_grouping_button_clicked()
 
 void Admin::on_userinformation_button_clicked()
 {
-    ui->tabWidget->addTab(new QWidget,"User Information");
+    ui->tabWidget->addTab(new UserInformation,"User Information");
     ui->tabWidget->setCurrentIndex(ui->tabWidget->count()-1);
     ui->tabWidget->setTabIcon(ui->tabWidget->currentIndex(),QIcon("D:/grocery_store/grocery_store/assets/icons/information (1).png"));
 
@@ -92,4 +113,11 @@ void Admin::on_logout_button_clicked()
 }
 
 
+
+
+void Admin::on_editprofile_button_clicked()
+{
+    ui->tabWidget->addTab(new EditProfile(nullptr,"Admin"),"Edit Profile");
+    ui->tabWidget->setCurrentIndex(ui->tabWidget->count()-1);
+}
 

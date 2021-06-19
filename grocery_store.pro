@@ -10,28 +10,43 @@ CONFIG += c++11
 
 SOURCES += \
     admin.cpp \
+    deleteproduct.cpp \
+    editproduct.cpp \
+    editprofile.cpp \
     grouping.cpp \
     main.cpp \
     mainwindow.cpp \
     newproduct.cpp \
+    product.cpp \
     singup.cpp \
-    user.cpp
+    user.cpp \
+    userinformation.cpp
 
 HEADERS += \
     admin.h \
+    deleteproduct.h \
+    editproduct.h \
+    editprofile.h \
     grouping.h \
     mainwindow.h \
     newproduct.h \
+    product.h \
     singup.h \
-    user.h
+    user.h \
+    userinformation.h
 
 FORMS += \
     admin.ui \
+    deleteproduct.ui \
+    editproduct.ui \
+    editprofile.ui \
     grouping.ui \
     mainwindow.ui \
     newproduct.ui \
+    product.ui \
     singup.ui \
-    user.ui
+    user.ui \
+    userinformation.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
