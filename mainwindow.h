@@ -21,8 +21,11 @@ private slots:
 
     void on_login_button_clicked();
 
+protected:
+    void keyPressEvent(QKeyEvent *key);
 
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H

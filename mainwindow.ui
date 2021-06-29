@@ -340,6 +340,15 @@ color:#d9faff;
      <property name="text">
       <string>Sign in</string>
      </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
     </widget>
     <widget class="QFrame" name="username_F">
      <property name="geometry">

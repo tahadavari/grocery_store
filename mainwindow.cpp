@@ -10,6 +10,7 @@
 #include <QSqlDriver>
 #include <QSqlError>
 #include <QSqlQuery>
+#include <QKeyEvent>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -30,6 +31,12 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *key)
+{
+
+    if(key->key()==Qt::Key_Enter)
+        on_login_button_clicked();
+}
 
 void MainWindow::on_singupnow_clicked()
 {
